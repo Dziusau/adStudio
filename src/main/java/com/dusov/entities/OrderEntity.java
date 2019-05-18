@@ -6,12 +6,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
     private String name;
     private String surname;
     private String message;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

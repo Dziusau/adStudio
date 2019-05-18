@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="advertising.css" rel="stylesheet">
+    <link href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Заказать рекламу</title>
+</head>
+<body>
+<header>
+    <div class="advertising">
+        <h1>Заказать рекламу</h1>
+        <form class="form-name" action="#" th:action="@{/advertising}" th:object="${orderEntity}" method="post">
+            <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" th:field="*{name}">
+        </form>
+        <form class="form-surname" action="#" th:action="@{/advertising}" th:object="${orderEntity}" method="post">
+            <input type="name" class="form-control2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Фамилия" th:field="*{surname}">
+        </form>
+        <form class="form-messange" action="#" th:action="@{/advertising}" th:object="${orderEntity}" method="post">
+            <input type="name" class="form-control3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Сообщение" th:field="*{message}">
+        </form>
+        <button type="button" class="submit">Заказать</button>
+        <div>
+            <a href="#"><p class="no_messange_arrived">не пришло cообщение?</p></a>
+        </div>
+    </div>
+</header>
+</body>
+</html>

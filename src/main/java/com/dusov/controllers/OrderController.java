@@ -1,6 +1,6 @@
 package com.dusov.controllers;
 
-import com.dusov.entities.Order;
+import com.dusov.entities.OrderEntity;
 import com.dusov.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,16 +11,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class OrderController {
+    private final OrderRepository orderRepository;
+
     @Autowired
-    private OrderRepository orderRepository;
+    public OrderController(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     @GetMapping("/advertising")
     public String advertisingForm(Model model){
-        model.addAttribute("order", new Order());
-        return "ad_studio/advertising";
+        model.addAttribute("orderEntity", new OrderEntity());
+        return "advertising";
     }
     @PostMapping("/advertising")
-    public String advertisingSubmit(@ModelAttribute Order order){
-        return "ad_studio/advertising";
+    public String advertisingSubmit(@ModelAttribute OrderEntity orderEntity){
+        orderRepository.save(orderEntity);
+        return "date";
     }
 }

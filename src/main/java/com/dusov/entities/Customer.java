@@ -14,20 +14,12 @@ public class Customer {
     private String surname;
     private Integer amountOfOrders;
 
-    public Integer getAmountOfOrders() {
-        return amountOfOrders;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAmountOfOrders(Integer amountOfOrders) {
-        this.amountOfOrders = amountOfOrders;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -38,11 +30,19 @@ public class Customer {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public Integer getAmountOfOrders() {
+        return amountOfOrders;
+    }
+
+    public void setAmountOfOrders(Integer amountOfOrders) {
+        this.amountOfOrders = amountOfOrders;
     }
 }
