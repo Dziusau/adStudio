@@ -9,4 +9,12 @@ public class AppController {
     public String advertisingForm() {
         return "index";
     }
+    @GetMapping("/contact")
+    public String contactForm(){
+        return "contact";
+    }
+    @GetMapping("/date")
+    public String dateForm(){
+        return "date";
+    }
 }

@@ -16,11 +16,19 @@
                 <table class="table" border="2" cellspacing="0" cellpadding="15" width="90%" height="60" >
                     <tr>
                         <th>Date</th>
-                        <th>Name th:text="${orderEntity.name}</th>
-                        <th>Surname th:text="${orderEntity.surname}</th>
+                        <th>Name</th>
+                        <th>Surname</th>
                         <th>Email</th>
                         <th>Message</th>
                         <th>Status</th>
+                    </tr>
+                    <tr th:each="orderEntity: ${orderEntities}">
+                        <th th:text="${orderEntity.id}"></th>
+                        <th th:text="${orderEntity.name}"></th>
+                        <th th:text="${orderEntity.surname}"></th>
+                        <th th:text="${orderEntity.surname}"></th>
+                        <th th:text="${orderEntity.message}"></th>
+                        <th> *** </th>
                     </tr>
                 </table>
             </div>

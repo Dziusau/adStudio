@@ -17,7 +17,7 @@
               <p class="input-txt"> Вход</p>
             </div>
             <div>
-               <a th:href="@{'/advertising'}"><button class="button">Заказать рекламу</button></a>
+               <a th:href="@{'/advertising'}" th:method="get"><button class="button">Заказать рекламу</button></a>
             </div>
             <div class="advert">
                 <p class="advert_by">Advert.by</p>
@@ -62,7 +62,7 @@
                                 <p class="protection_against_vandals-txt1">Вся реклама размещена под оргстеклом и укреплена специальными шурупами</p>
                             </div>
                             <div>
-                               <a href="advertising.html"><button class="button5">Заказать рекламу</button></a>
+                               <a th:href="@{'/advertising'}" th:method="get"><button class="button5">Заказать рекламу</button></a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="drawing_a_layout-itm">
                     <p class="drawing_a_layout-txt1">1</p>
                     <p class="drawing_a_layout-txt2">Рисование макета</p>
-                   <a href="layota.html"><button class="button6">Заказать макет</button></a>
+                   <a th:href="@{'/layout'}" th:method="get"><button class="button6">Заказать макет</button></a>
                     <div>
                         <p class="drawing_a_layout-txt_layota">Макет - ваше представление рекламы. Главное в вашей рекламе - то, как она выглядит.</p>
                         <p class="recommendation">Совет:</p>
@@ -108,7 +108,7 @@
             <section class="order_your_ad_right_now">
                 <div class="order_your_ad_right_now-item">
                     <p class="order_your_ad_right_now-txt">Нет ничего проще! Закажите рекламу прямо сейчас!</p>
-                   <a href="advertising.html"><button class="button7">Заказать рекламу</button></a>
+                   <a th:href="@{'/advertising'}" th:method="get"><button class="button7">Заказать рекламу</button></a>
                 </div>
                 <div>
                     <p class="comments">Отзывы</p>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="go_to_contacts">
-                    <a href="contact.html">Перейти к контактам</a>
+                    <a th:href="@{'/contact'}" th:method="get">Перейти к контактам</a>
                 </div>
                 <div class="icon">
                    <a href="https://vk.com/"><img src="vk.png" class="icons" width="40"></a>
@@ -154,7 +154,7 @@
                    <a href="https://www.facebook.com/"><img src="facebook.png" class="icons" width="40"></a>
                 </div>
                 <div class="arrow-point">
-                   <a href="date.html"><img src="arrow-point.png" width="50"></a>
+                   <a th:href="@{'/date'}" th:method="get"><img src="arrow-point.png" width="50"></a>
                 </div>
             </section>
         </main>

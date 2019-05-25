@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="layout.css" rel="stylesheet">
+        <link href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <title>Заказать макет</title>
+    </head>
+    <body>
+        <header>
+            <div class="layout">
+                <h1>Заказать макет</h1>
+                    <form class="form-name" action="#" th:action="@{/layout}" th:object="${layoutEntity}" method="post">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" th:field="*{name}">
+                    </form>
+                    <form class="form-surname">
+                        <input type="text" class="form-control2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Фамилия" th:field="*{surname}">
+                    </form>
+                    <form class="form-messange">
+                        <input type="text" class="form-control3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Сообщение" th:field="*{message}">
+                    </form>
+                    <button type="submit" class="submit">Заказать</button>
+                <div>
+                   <a href="#"><p class="no_messange_arrived">не пришло cообщение?</p></a>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

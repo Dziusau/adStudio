@@ -9,29 +9,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller("advertising")
-public class OrderController {
+@Controller("layout")
+public class LayoutController {
     private final OrderRepository orderRepository;
 
     @Autowired
-    public OrderController(OrderRepository orderRepository) {
+    public LayoutController(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
-
     @GetMapping
-    public String advertisingForm(Model model){
-        model.addAttribute("orderEntity", new OrderEntity());
-        return "advertising";
+    public String layoutForm(Model model){
+        model.addAttribute("layoutEntity", new OrderEntity());
+        return "layout";
     }
     @PostMapping
-    public String advertisingSubmit(@ModelAttribute OrderEntity orderEntity){
-        orderRepository.save(orderEntity);
+    public String layoutSubmit(@ModelAttribute OrderEntity layoutEntity){
+        orderRepository.save(layoutEntity);
         return "redirect:/all";
     }
-
-    @GetMapping("/all")
-    public String getAdvertisingAll(Model model){
-        model.addAttribute("orderEntities", orderRepository.findAll());
-        return "date";
-    }
 }
+
