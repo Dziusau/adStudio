@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller("advertising")
+@Controller
+@RequestMapping("advertising")
 public class OrderController {
     private final OrderRepository orderRepository;
 
@@ -26,10 +28,10 @@ public class OrderController {
     @PostMapping
     public String advertisingSubmit(@ModelAttribute OrderEntity orderEntity){
         orderRepository.save(orderEntity);
-        return "redirect:/all";
+        return "redirect:/advertising/all";
     }
 
-    @GetMapping("/all")
+    @GetMapping("all")
     public String getAdvertisingAll(Model model){
         model.addAttribute("orderEntities", orderRepository.findAll());
         return "date";

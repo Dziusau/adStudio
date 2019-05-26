@@ -14,17 +14,16 @@
             <div class="layout">
                 <h1>Заказать макет</h1>
                     <form class="form-name" action="#" th:action="@{/layout}" th:object="${layoutEntity}" method="post">
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" th:field="*{name}">
-                    </form>
-                    <form class="form-surname">
-                        <input type="text" class="form-control2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Фамилия" th:field="*{surname}">
-                    </form>
-                    <form class="form-messange">
-                        <input type="text" class="form-control3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Сообщение" th:field="*{message}">
+                        <input type="text" class="form-control" aria-describedby="emailHelp"
+                               placeholder="Имя" th:field="*{name}">
+                        <input type="text" class="form-control2" aria-describedby="emailHelp"
+                               placeholder="Фамилия" th:field="*{surname}">
+                        <input type="text" class="form-control3" aria-describedby="emailHelp"
+                               placeholder="Сообщение" th:field="*{message}">
                     </form>
                     <button type="submit" class="submit">Заказать</button>
                 <div>
-                   <a href="#"><p class="no_messange_arrived">не пришло cообщение?</p></a>
+                   <a th:href="@{'/contact'}"><p class="no_messange_arrived">не пришло cообщение?</p></a>
                 </div>
             </div>
         </header>

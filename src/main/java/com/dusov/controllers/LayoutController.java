@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller("layout")
+@Controller
+@RequestMapping("layout")
 public class LayoutController {
     private final OrderRepository orderRepository;
 
@@ -25,7 +27,7 @@ public class LayoutController {
     @PostMapping
     public String layoutSubmit(@ModelAttribute OrderEntity layoutEntity){
         orderRepository.save(layoutEntity);
-        return "redirect:/all";
+        return "redirect:/advertising/all";
     }
 }
 

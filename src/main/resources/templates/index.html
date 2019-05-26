@@ -11,10 +11,10 @@
     <body>
         <header>
             <div class="registrations">
-                <p class="registrations-txt">Регистрация</p>
+                <a th:href="@{'/customer'}" th:method="get"><p class="registrations-txt">Регистрация</p></a>
             </div>
             <div class="input">
-              <p class="input-txt"> Вход</p>
+                <a th:href="@{'/customer/entrance'}" th:method="get"><p class="input-txt"> Вход</p>
             </div>
             <div>
                <a th:href="@{'/advertising'}" th:method="get"><button class="button">Заказать рекламу</button></a>
